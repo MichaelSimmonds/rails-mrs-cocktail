@@ -2,6 +2,7 @@
 
 <%=link_to cocktail_path(cocktail) do%>
   <div class="cocktailrecipecard-container">
+    <%= cl_image_tag cocktail.photo.url(:standard) %>
     <h2><%=cocktail.name%></h2>
     <ul>
       <%cocktail.doses.each do |dose|%>
