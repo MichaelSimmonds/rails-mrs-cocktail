@@ -1,0 +1,15 @@
+.cocktailrecipecard-container {
+  position: relative;
+  border: 1px solid $brand-color;
+  border-radius: 5px;
+  // box-shadow: 1px 1px $blue 50%;
+  margin: 1.2em;
+  padding: 2em;
+  padding-left: 3em;
+  .recipe-name{
+    text-transform: uppercase;
+  }
+  .recipe-dose-container{
+    border: 1px solid black;
+  }
+}

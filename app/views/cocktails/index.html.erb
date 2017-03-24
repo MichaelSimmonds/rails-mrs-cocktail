@@ -2,5 +2,5 @@
 <p>Find me in app/views/cocktails/index.html.erb</p>
 <h1>Heres a list of cocktails</h1>
 <%@cocktails.each do |cocktail|%>
-  <%=cocktail.name%>
+  <%=render 'components/cocktailrecipecard', cocktail: cocktail%>
 <%end%>
