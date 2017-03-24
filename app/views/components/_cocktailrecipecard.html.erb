@@ -1,10 +1,15 @@
 <!-- This is the card to display each coctail in the index list -->
-<div class="cocktailrecipecard-container">
-  <%=cocktail.name%>
-  <h1>WOOO</h1>
-  <%byebug%>
-  <%cocktail.doses.each do |dose|%>
-  <%= dose.ingredient%>
-  <%= dose.description-%>
-  <%end%>
-</div>
+
+<%=link_to cocktail_path(cocktail) do%>
+  <div class="cocktailrecipecard-container">
+    <h2><%=cocktail.name%></h2>
+    <ul>
+      <%cocktail.doses.each do |dose|%>
+        <li>
+          <%= dose.ingredient.name%>
+          <%= dose.description%>
+        </li>
+      <%end%>
+  </ul>
+  </div>
+<%end%>
