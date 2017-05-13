@@ -1,0 +1,18 @@
+.title-container {
+  // border: 1px solid $brand-color;
+  border-radius: 5px;
+  color: white;
+  padding: 3em;
+  margin: 1.2em;
+  margin-bottom: 2.5em;
+  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/e8/1b/7b/e81b7b1a0cd29bc237adb4c48ec91557.jpg);
+  background-size: cover;
+  box-shadow: 0 0 20px 20px white inset, -25px -25px 50px 0 white inset;
+  .text-background {
+    display: inline-block;
+    padding: 0.4em 1.2em;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 3px solid white;
+    margin-bottom: 1.2em;
+  }
+}

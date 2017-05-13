@@ -1,16 +1,30 @@
 <!-- This is the card to display each coctail in the index list -->
-
-<%=link_to cocktail_path(cocktail) do%>
+<div class="layer-parent .slideDown">
+  <%=link_to cocktail_path(cocktail) do%>
   <div class="cocktailrecipecard-container">
     <%= cl_image_tag cocktail.photo.url(:standard) %>
-    <h2><%=cocktail.name%></h2>
-    <ul>
-      <%cocktail.doses.each do |dose|%>
-        <li>
-          <%= dose.ingredient.name%>
-          <%= dose.description%>
-        </li>
-      <%end%>
-  </ul>
+    <div class= "cocktail-details">
+      <h2><%=cocktail.name%></h2>
+      <div class="dose-container">
+        <ul>
+          <%cocktail.doses.each do |dose|%>
+          <li>
+            <%= dose.description%>
+            of
+            <%= dose.ingredient.name%>
+          </li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+    <div class="empty_div">
+      <!-- empty -->
+    </div>
   </div>
-<%end%>
+  <%end%>
+
+  <div class="buttons-container">
+    <%=link_to 'Add dose', new_cocktail_dose_path(cocktail), class: 'btn btn-primary'%>
+  </div>
+
+</div>

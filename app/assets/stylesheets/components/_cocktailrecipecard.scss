@@ -8,25 +8,86 @@ a{
   }
 }
 
+.layer-parent {
+  position: relative;
+}
+
 .cocktailrecipecard-container {
   display: flex;
-  
+  justify-content: space-between;
   position: relative;
-  border: 1px solid $brand-color;
+  border: 1px solid $brand-grey;
   border-radius: 5px;
   // box-shadow: 1px 1px $blue 50%;
-  margin: 1.2em;
+  margin: 1em;
   padding: 2em;
   padding-left: 3em;
-  background-color: inherit;
+  background-color: rgba(209, 225, 232, 0.2);
   transition: background-color 0.3s;
+
   &:hover{
-    background-color: lightgrey;
+    background-color: $brand-bluegrey;
+  }
+
+  h2 {
+    padding-bottom: 1em;
+    margin-top: 0;
+  }
+
+  img {
+    background-color: white;
+    padding: 1em;
+    border: 1px solid $brand-color;
+    border-radius: 5px;
+    margin-right: 1.2em;
+  }
+  .cocktail-details {
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+    // border: 1px solid $brand-color;
+    padding: 1em;
+  }
+
+  .dose-container {
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    border: 1px solid $brand-color;
+    border-radius: 5px;
+    margin: auto;
+    padding: 1em;
+    ul {
+      list-style: none;
+      padding: 0;
+    }
   }
   .recipe-name{
     text-transform: uppercase;
   }
   .recipe-dose-container{
     border: 1px solid black;
+  }
+
+}
+
+.empty_div {
+  width: 33%;
+}
+
+.buttons-container {
+  position: absolute;
+  text-align: center;
+  right: 10%;
+  top: 33%;
+  // border: 1px solid $brand-color;
+  z-index: 400;
+}
+@media (max-width: 996px) {
+  .buttons-container{
+    display: none;
+  }
+  .empty_div {
+    display: none;
   }
 }
